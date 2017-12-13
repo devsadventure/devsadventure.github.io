@@ -1,12 +1,129 @@
+@charset "utf-8";
+@import url("normalize.css");
+@import url("fonts.css");
+
+/* 공용 스타일 */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* css reset */
+
+html,
+body,
+button,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    background: tan;
+}
+
+
+/* 공통 본문 요소 */
+
 body {
     margin: 0;
     padding: 0;
-}
-
-.content {
-    width: 960px;
-    margin: 0 auto;
-    background: green;
 }
 
 .clearfix {
@@ -21,109 +138,115 @@ body {
     clear: both;
 }
 
+
+/* 그리드 레이아웃 잡기 */
+
 .col {
     float: left;
 }
 
-.col-1 {
-    width: 120px;
-    background: yellow;
+.m-col-1 {
+    width: 80px;
 }
 
-.col-2 {
+.m-col-2 {
+    width: 160px;
+}
+
+.m-col-3 {
     width: 240px;
 }
 
-.col-3 {
-    width: 360px;
-}
-
-.col-4 {
-    width: 480px;
-}
-
-.col-5 {
-    width: 600px;
-}
-
-.col-6 {
-    width: 720px;
-}
-
-.col-7 {
-    width: 840px;
-}
-
-.col-8 {
-    width: 960px;
-}
-
-.content .push-1 {
-    left: 120px;
-}
-
-.content .push-2 {
-    left: 240px;
-}
-
-.content .push_3 {
-    left: 360px;
-}
-
-.content .push_4 {
-    left: 480px;
-}
-
-.content .push_5 {
-    left: 600px;
-}
-
-.content .push_6 {
-    left: 720px;
-}
-
-.content .push_7 {
-    left: 840px;
-}
-
-.content .push_8 {
-    left: 960px;
+.m-col-4 {
+    width: 320px;
 }
 
 
-/* `Pull Space >> 12 Columns
-----------------------------------------------------------------------------------------------------*/
+/* 카드별 높이값 */
 
-.content .pull_1 {
-    left: -120px;
+.article1 {
+    height: 360px;
 }
 
-.content .pull_2 {
-    left: -240px;
+.article2 {
+    height: 120px;
 }
 
-.content .pull_3 {
-    left: -360px;
+.article3 {
+    height: 240px;
 }
 
-.content .pull_4 {
-    left: -480px;
+
+/* 숨김 콘텐츠 */
+
+.readable-hidden,
+.a11y,
+legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
 }
 
-.content .pull_5 {
-    left: -600px;
+.a11y:focus {
+    top: 5px;
+    left: 50%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: rect(auto, auto, auto, auto);
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
-.content .pull_6 {
-    left: -720px;
+
+/* content 스타일 */
+
+.article1 {
+    display: grid;
+    grid-template-columns: 45px auto 45px;
+    grid-template-rows: 30px 80px 150px 60px auto;
 }
 
-.content .pull_7 {
-    left: -840px;
+.item1-name {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-.content .pull_8 {
-    left: -960px;
+.item1-img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.item1-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.item1-cost {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.shopping-info {
+    display: none;
+}
+
+.shopping-info:hover {
+    display: block;
 }
 
 .box1 {
@@ -190,32 +313,100 @@ body {
     background: rebeccapurple;
 }
 
-.article1 {
-    height: 360px;
-}
-
-.article2 {
-    height: 120px;
-}
-
-.article3 {
-    height: 240px;
-}
-
-@media only screen and (max-width: 460px) {
-    .content {
-        width: 320px;
+@media only screen and (min-width: 460px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+        background: green;
     }
-    .m-col-1 {
-        width: 80px;
+    .col-1 {
+        width: 120px;
     }
-    .m-col-2 {
-        width: 160px;
-    }
-    .m-col-3 {
+    .col-2 {
         width: 240px;
     }
-    .m-col-4 {
-        width: 320px;
+    .col-3 {
+        width: 360px;
+    }
+    .col-4 {
+        width: 480px;
+    }
+    .col-5 {
+        width: 600px;
+    }
+    .col-6 {
+        width: 720px;
+    }
+    .col-7 {
+        width: 840px;
+    }
+    .col-8 {
+        width: 960px;
+    }
+    .push-1,
+    .push-2,
+    .push-3,
+    .push-4,
+    .push-5,
+    .push-6,
+    .push-7,
+    .push-8,
+    .pull-1,
+    .pull-2,
+    .pull-3,
+    .pull-4,
+    .pull-5,
+    .push-6,
+    .push-7,
+    .push-8 {
+        position: relative;
+    }
+    .push-1 {
+        left: 120px;
+    }
+    .push-2 {
+        left: 240px;
+    }
+    .push-3 {
+        left: 360px;
+    }
+    .push-4 {
+        left: 480px;
+    }
+    .push-5 {
+        left: 600px;
+    }
+    .push_6 {
+        left: 720px;
+    }
+    .push-7 {
+        left: 840px;
+    }
+    .push-8 {
+        left: 960px;
+    }
+    .pull-1 {
+        left: -120px;
+    }
+    .pull-2 {
+        left: -240px;
+    }
+    .pull-3 {
+        left: -360px;
+    }
+    .pull-4 {
+        left: -480px;
+    }
+    .pull-5 {
+        left: -600px;
+    }
+    .pull-6 {
+        left: -720px;
+    }
+    .pull-7 {
+        left: -840px;
+    }
+    .pull-8 {
+        left: -960px;
     }
 }
