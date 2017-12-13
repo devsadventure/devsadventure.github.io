@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    background: green;
+}
+
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+}
+
+.col-1 {
+    width: 120px;
+    background: yellow;
+}
+
+.col-2 {
+    width: 240px;
+}
+
+.col-3 {
+    width: 360px;
+}
+
+.col-4 {
+    width: 480px;
+}
+
+.col-5 {
+    width: 600px;
+}
+
+.col-6 {
+    width: 720px;
+}
+
+.col-7 {
+    width: 840px;
+}
+
+.col-8 {
+    width: 960px;
+}
+
+.content .push-1 {
+    left: 120px;
+}
+
+.content .push-2 {
+    left: 240px;
+}
+
+.content .push_3 {
+    left: 360px;
+}
+
+.content .push_4 {
+    left: 480px;
+}
+
+.content .push_5 {
+    left: 600px;
+}
+
+.content .push_6 {
+    left: 720px;
+}
+
+.content .push_7 {
+    left: 840px;
+}
+
+.content .push_8 {
+    left: 960px;
+}
+
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.content .pull_1 {
+    left: -120px;
+}
+
+.content .pull_2 {
+    left: -240px;
+}
+
+.content .pull_3 {
+    left: -360px;
+}
+
+.content .pull_4 {
+    left: -480px;
+}
+
+.content .pull_5 {
+    left: -600px;
+}
+
+.content .pull_6 {
+    left: -720px;
+}
+
+.content .pull_7 {
+    left: -840px;
+}
+
+.content .pull_8 {
+    left: -960px;
+}
+
+.box1 {
+    background: palegoldenrod;
+}
+
+.box2 {
+    background: orange;
+}
+
+.box3 {
+    background: indianred;
+}
+
+.box4 {
+    background: olivedrab;
+}
+
+.box5 {
+    background: olive;
+}
+
+.box6 {
+    background: orchid;
+}
+
+.box7 {
+    background: wheat;
+}
+
+.box8 {
+    background: yellow;
+}
+
+.box9 {
+    background: aquamarine;
+}
+
+.box10 {
+    background: peru;
+}
+
+.box11 {
+    background: plum;
+}
+
+.box12 {
+    background: purple;
+}
+
+.box13 {
+    background: hotpink;
+}
+
+.box14 {
+    background: pink;
+}
+
+.box15 {
+    background: red;
+}
+
+.box16 {
+    background: rebeccapurple;
+}
+
+.article1 {
+    height: 360px;
+}
+
+.article2 {
+    height: 120px;
+}
+
+.article3 {
+    height: 240px;
+}
+
+@media only screen and (max-width: 460px) {
+    .content {
+        width: 320px;
+    }
+    .m-col-1 {
+        width: 80px;
+    }
+    .m-col-2 {
+        width: 160px;
+    }
+    .m-col-3 {
+        width: 240px;
+    }
+    .m-col-4 {
+        width: 320px;
+    }
+}
