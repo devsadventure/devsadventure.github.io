@@ -207,6 +207,10 @@ legend {
 
 /* content 스타일 */
 
+.row{
+    width: 240px;
+    margin: 0 auto;
+}
 .article1 {
     display: grid;
     grid-template-columns: 45px auto 45px;
@@ -214,10 +218,8 @@ legend {
 }
 
 .item1-name {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .item1-img {
@@ -408,5 +410,12 @@ legend {
     }
     .pull-8 {
         left: -960px;
+    }
+
+    /* 내부 컨텐츠 */
+
+    .row {
+        width: auto;
+        margin: 0 auto;
     }
 }
