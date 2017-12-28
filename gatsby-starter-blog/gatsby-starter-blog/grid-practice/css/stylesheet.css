@@ -1,0 +1,420 @@
+@charset "utf-8";
+@import url("normalize.css");
+@import url("fonts.css");
+
+/* 공용 스타일 */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* css reset */
+
+html,
+body,
+button,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    background: tan;
+}
+
+
+/* 공통 본문 요소 */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 그리드 레이아웃 잡기 */
+
+.col {
+    float: left;
+}
+
+.m-col-1 {
+    width: 80px;
+}
+
+.m-col-2 {
+    width: 160px;
+}
+
+.m-col-3 {
+    width: 240px;
+}
+
+.m-col-4 {
+    width: 320px;
+}
+
+
+/* 카드별 높이값 */
+
+.article1 {
+    height: 360px;
+}
+
+.article2 {
+    height: 120px;
+}
+
+.article3 {
+    height: 240px;
+}
+
+
+/* 숨김 콘텐츠 */
+
+.readable-hidden,
+.a11y,
+legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.a11y:focus {
+    top: 5px;
+    left: 50%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: rect(auto, auto, auto, auto);
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+/* content 스타일 */
+
+.row{
+    width: 240px;
+    margin: 0 auto;
+}
+.article1 {
+    display: grid;
+    grid-template-columns: 45px auto 45px;
+    grid-template-rows: 30px 80px 150px 60px auto;
+}
+
+.item1-name {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.item1-img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.item1-label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.item1-cost {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.shopping-info {
+    display: none;
+}
+
+.shopping-info:hover {
+    display: block;
+}
+
+.box1 {
+    background: palegoldenrod;
+}
+
+.box2 {
+    background: orange;
+}
+
+.box3 {
+    background: indianred;
+}
+
+.box4 {
+    background: olivedrab;
+}
+
+.box5 {
+    background: olive;
+}
+
+.box6 {
+    background: orchid;
+}
+
+.box7 {
+    background: wheat;
+}
+
+.box8 {
+    background: yellow;
+}
+
+.box9 {
+    background: aquamarine;
+}
+
+.box10 {
+    background: peru;
+}
+
+.box11 {
+    background: plum;
+}
+
+.box12 {
+    background: purple;
+}
+
+.box13 {
+    background: hotpink;
+}
+
+.box14 {
+    background: pink;
+}
+
+.box15 {
+    background: red;
+}
+
+.box16 {
+    background: rebeccapurple;
+}
+
+@media only screen and (min-width: 460px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+        background: green;
+    }
+    .col-1 {
+        width: 120px;
+    }
+    .col-2 {
+        width: 240px;
+    }
+    .col-3 {
+        width: 360px;
+    }
+    .col-4 {
+        width: 480px;
+    }
+    .col-5 {
+        width: 600px;
+    }
+    .col-6 {
+        width: 720px;
+    }
+    .col-7 {
+        width: 840px;
+    }
+    .col-8 {
+        width: 960px;
+    }
+    .push-1,
+    .push-2,
+    .push-3,
+    .push-4,
+    .push-5,
+    .push-6,
+    .push-7,
+    .push-8,
+    .pull-1,
+    .pull-2,
+    .pull-3,
+    .pull-4,
+    .pull-5,
+    .push-6,
+    .push-7,
+    .push-8 {
+        position: relative;
+    }
+    .push-1 {
+        left: 120px;
+    }
+    .push-2 {
+        left: 240px;
+    }
+    .push-3 {
+        left: 360px;
+    }
+    .push-4 {
+        left: 480px;
+    }
+    .push-5 {
+        left: 600px;
+    }
+    .push_6 {
+        left: 720px;
+    }
+    .push-7 {
+        left: 840px;
+    }
+    .push-8 {
+        left: 960px;
+    }
+    .pull-1 {
+        left: -120px;
+    }
+    .pull-2 {
+        left: -240px;
+    }
+    .pull-3 {
+        left: -360px;
+    }
+    .pull-4 {
+        left: -480px;
+    }
+    .pull-5 {
+        left: -600px;
+    }
+    .pull-6 {
+        left: -720px;
+    }
+    .pull-7 {
+        left: -840px;
+    }
+    .pull-8 {
+        left: -960px;
+    }
+
+    /* 내부 컨텐츠 */
+
+    .row {
+        width: auto;
+        margin: 0 auto;
+    }
+}
